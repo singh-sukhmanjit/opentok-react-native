@@ -120,11 +120,7 @@ export default class OTSubscriber extends Component {
   }
 
   componentWillUnmount() {
-    removeEventListener(
-      this.context.sessionId,
-      'streamCreated',
-      this.streamCreatedHandler
-    );
+    removeEventListener('streamCreated', this.streamCreatedHandler);
     removeEventListener(
       this.context.sessionId,
       'publisherStreamCreated',

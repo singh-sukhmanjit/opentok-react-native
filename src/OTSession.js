@@ -162,11 +162,6 @@ export default class OTSession extends Component {
   }
 
   componentDidUpdate(previousProps) {
-    // Update event handlers when props change to avoid stale closures
-    if (previousProps.eventHandlers !== this.props.eventHandlers) {
-      this.eventHandlers = this.props.eventHandlers;
-    }
-
     const shouldUseDefault = (value, defaultValue) =>
       value === undefined ? defaultValue : value;
 
