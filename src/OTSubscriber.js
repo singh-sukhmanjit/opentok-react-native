@@ -24,6 +24,7 @@ export default class OTSubscriber extends Component {
 
   constructor(props, context) {
     super(props, context);
+    console.log('lol subscriber constructor');
     let initialStreams = getStreams(this.context.sessionId);
     let initialPublisherStream = getPublisherStream(this.context.sessionId);
     if (props.subscribeToSelf && initialPublisherStream) {
